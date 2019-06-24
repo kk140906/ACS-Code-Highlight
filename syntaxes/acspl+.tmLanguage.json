@@ -1,0 +1,220 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ACSPL+",
+  "patterns": [
+    {
+      "include": "#keywords.Axis"
+    },
+    {
+      "include": "#keywords.Interactive"
+    },
+    {
+      "include": "#keywords.Motion"
+    },
+    {
+      "include": "#keywords.ProgramFlow"
+    },
+    {
+      "include": "#keywords.Miscellaneous"
+    },
+    {
+      "include": "#keywords.Operator"
+    },
+    {
+      "include": "#function.Math"
+    },
+    {
+      "include": "#function.Miscellaneous"
+    },
+    {
+      "include": "#function.Array"
+    },
+    {
+      "include": "#function.EtherCAT"
+    },
+    {
+      "include": "#function.CoE"
+    },
+    {
+      "include": "#function.ServoProcessor"
+    },
+    {
+      "include": "#function.SignalProcess"
+    },
+    {
+      "include": "#constant.Numerics"
+    },
+    {
+      "include": "#variable.Axis"
+    },
+    {
+      "include": "#variable.Motion"
+    },
+    {
+      "include": "#variable.DataCollection"
+    },
+    {
+      "include": "#variable.IO"
+    },
+    {
+      "include": "#variable.Monitor"
+    },
+    {
+      "include": "#variable.Program"
+    },
+    {
+      "include": "#variable.Safety"
+    },
+    {
+      "include": "#variable.ServoLoop"
+    },
+    {
+      "include": "#variable.Commutation"
+    },
+    {
+      "include": "#variable.SysConfig"
+    },
+    {
+      "include": "#variable.Communication"
+    },
+    {
+      "include": "#variable.Miscellaneous"
+    },
+    {
+      "include": "#variable.Parameter"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "keywords.Axis": {
+      "name": "keyword.control.Axis.acspl",
+      "match": "\\b(?i)(axisdef|break|commut|connect|depends|disable|enable|enablall|fclear|go|group|halt|imm|kill|safetyconf|safetygroup|set|split|assignmark|assignpeg|assignpouts|peg_i|peg_r|startpeg|stoppeg)\\b"
+    },
+    "keywords.Interactive": {
+      "name": "keyword.control.Interactive.acspl",
+      "match": "\\b(?i)(disp|inp|interrupt|interruptex|send|trigger|outp)\\b"
+    },
+    "keywords.Motion": {
+      "name": "keyword.control.Motion.acspl",
+      "match": "\\b(?i)(arc1|arc2|jog|line|master|mpoint|mptp|mseg|path|pvspline|xseg|ends|point|projection|ptp|slave|stopper|track)\\b"
+    },
+    "keywords.ProgramFlow": {
+      "name": "keyword.control.ProgramFlow.acspl",
+      "match": "\\b(?i)(if|else|elseif|while|loop|block|end|call|goto|input|till|wait|on|ret|disabelon|enableon|pause|resume|start|stop)\\b"
+    },
+    "keywords.Miscellaneous": {
+      "name": "keyword.control.Miscellaneous.acspl",
+      "match": "\\b(?i)(global|int|real|dc|stopdc|read|spdc|write|spinject|stopinject|sprt|sprtstop|eipgetattr|eipgetind1|eipgetind2|eipgettag|eipsetasm)\\b"
+    },
+    "keywords.Operator": {
+      "name": "keyword.operator.acspl",
+      "match": "(\\+|\\-|\\*|\\/|\\||\\&|\\>|\\<|\\=|\\^|\\.#?)"
+    },
+    "function.Math": {
+      "name": "entity.name.function.Math.acspl",
+      "match": "\\b(?i)(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|hypot|ldexp|log|log10|pow|sign|sin|sqrt|tan)\\b"
+    },
+    "function.Miscellaneous": {
+      "name": "entity.name.function.Miscellaneous.acspl",
+      "match": "\\b(?i)(getconf|sysinfo|getvar|setconf|setvar|str|strtonum|numtostr|bcopy)\\b"
+    },
+    "function.Array": {
+      "name": "entity.name.function.Array.acspl",
+      "match": "\\b(?i)(avg|copy|dshift|fill|max|maxi|min|mini)\\b"
+    },
+    "function.EtherCAT": {
+      "name": "entity.name.function.EtherCAT.acspl",
+      "match": "\\b(?i)(coegetsize|eccloseport|ecclrreg|ecextin|ecextout|ecgetgrpind|ecgetpid|ecgetmain|ecgetoffset|ecgetoptgrp|ecgetred|ecgetreg|ecgetslaves|ecgetstate|ecgetvid|ecgrpinfo|ecin|ecout|ecrescan|ecrepair|ecsavecfg|ecsavedcnf|ecunmap|ecunmapin|ecunmapout)\\b"
+    },
+    "function.CoE": {
+      "name": "entity.name.function.CoE.acspl",
+      "match": "\\b(?i)(coeread|coewrite)\\b"
+    },
+    "function.ServoProcessor": {
+      "name": "entity.name.function.ServoProcessor.acspl",
+      "match": "\\b(?i)(getsp|getspa|getspv|setsp|setspv)\\b"
+    },
+    "function.SignalProcess": {
+      "name": "entity.name.function.SignalProcess.acspl",
+      "match": "\\b(?i)(deadzone|dsign|dstr|edge|intgr|lag|match|rand|roll|sat|copy|inp|map|mapb|mapn|mapnb|mapns|maps|map2|map2b|map2n|map2nb|map2ns|map2s)\\b"
+    },
+    "constant.Numerics": {
+      "name": "constant.numeric.acspl",
+      "match": "\\b[\\d\\.]+\\b"
+    },
+    "variable.Axis": {
+      "name": "variable.language.Axis.acspl",
+      "match": "\\b(AFLAGS|ENTIME|MFF|MFLAGS|SETTLE|SLCFIELD|SLCSLIP|SLPMAX|SLPMIN|STEPF|STEPW|TARGRAD|BOFFTIME|BONTIME|VELBRKE_AOFFS|E_FREQ|E2_FREQ|E_FLAGS|E2_FLAGS|E_PAR_A|E2_PAR_A|E_PAR_B|E2_PAR_B|E_PAR_C|E2_PAR_C|E_PAR_D|E2_PAR_D|E_PAR_E|E2_PAR_E|E_SCMUL|E2_SCMUL|E_TYPE|E2_TYPE|EFAC|E2FAC|EOFFS|E2OFFS|EPOS|FVFIL|F2ACC|RVFIL|SCSOFFS|SCCOFFS|SC2COFFS|SC2GAIN|SC2PHASE|SC2SOFFS|SLEBIASA|SLEBIASB|SLEBIASC|SLEBIASD|SLABITS|S2LABITS|SCGAIN|SCPHASE|CERRA|CERRI|CERRV|DELI|DELV|ERRA|ERRI|ERRV|SLLIMIT|SLLROUT|SRLIMIT|XACC|XCURI|XCURV|XRMS|XRMST|XSACC|XVEL|AST|IND|IST|M2ARK|MARK|MST|RMS|NST)\\b"
+    },
+    "variable.Motion": {
+      "name": "variable.language.Motion.acspl",
+      "match": "\\b(ACC|APOS|DEC|DAPOS|FACC|FPOS|F2POS|FVEL|F2VEL|GACC|GJERK|GMOT|GMQU|GMTYPE|GPATH|GPHASE|GRTIME|GSEG|GVEC|GVEL|JERK|KDEC|MPOS|NVEL|TPOS|PE|RACC|RJERK|RPOS|RVEL|VEL|SLDZMIN|SLDZMAX|SLDZTIME|SLZFF|SLFRC|SLFRCN|SLHRS|SLVKPDCF|SLPKPDCF|SLVKIDCF|SLCFIELD|SLCSLIP)\\b"
+    },
+    "variable.DataCollection": {
+      "name": "variable.language.DataCollection.acspl",
+      "match": "\\b(DCN|DCP|S_DCN|S_DCP|S_ST)\\b"
+    },
+    "variable.IO": {
+      "name": "variable.language.IO.acspl",
+      "match": "\\b(AIN|AOUT|DOUT|EXTIN|EXTOUT|IN|OUT)\\b"
+    },
+    "variable.Monitor": {
+      "name": "variable.language.Monitor.acspl",
+      "match": "\\b(JITTER|MSSYNC|USGBUF|USGTRACE|SOFTIME|TIME|USAGE)\\b"
+    },
+    "variable.Program": {
+      "name": "variable.language.Program.acspl",
+      "match": "\\b(ONRATE|PCHARS|PERL|PERR|PEXL|PFLAGS|PLINES|PRATE|PST)\\b"
+    },
+    "variable.Safety": {
+      "name": "variable.language.Safety.acspl",
+      "match": "\\b(AERR|CERRA|CERRI|CERRV|DELI|DELV|ECEXTST|FAULT|ECST|ECERR|FDEF|FMASK|MERR|SAFIN|SAFINI|S_ERR|S_FAULT|S_FDEF|S_FMASK|S_SAFIN|S_SAFINI|STODELAY|SYNC)\\b"
+    },
+    "variable.ServoLoop": {
+      "name": "variable.language.ServoLoop.acspl",
+      "match": "\\b(DCOM|SLBIASA|SLBIASB|SLIKI|SLIKP|SLIFILT|SLIOFFS|SLILI|SLVKI|SLVKIIF|SLVKISF|SLVKP|SLVKPIF|SLVKPSF|SLVLI|SLVRAT|SLVNFRQ|SLVNWID|SLVNATT|SLVSOF|SLVSOFD|SLVBODD|SLVBODF|SLVBOND|SLVBONF|SLDRA|SLDRAIF|SLDRX|SLPKI|SLPKIIF|SLPKISF|SLPLI|SLPKP|SLPLPIF|SLPKPSF|SLAFF|SLFRCD|SLCROUT|SLGCAXN|SLPROUT|SLP2ROUT|SLVROUT)\\b"
+    },
+    "variable.Commutation": {
+      "name": "variable.language.Commutation.acspl",
+      "match": "\\b(SLCHALL|SLCNP|SLCPA|SLCOFFS|SLCORG|SLCPRD|SLHROUT|SLSTHALL)\\b"
+    },
+    "variable.SysConfig": {
+      "name": "variable.language.SysConfig.acspl",
+      "match": "\\b(CFG|CTIME|ECHO|G_01WCS|G_02WCS|G_03WCS|G_04WCS|G_05WCS|G_06WCS|G_07WCS|G_08WCS|G_09WCS|G_10WCS|G_11WCS|G_12WCS|GPEXL|GUFAC|IENA|IMASK|ISENA|S_FLAGS|S_SETUP|XSEGAMAX|XSEGAMIN|XSEGRMAX|XSEGRMIN)\\b"
+    },
+    "variable.Communication": {
+      "name": "variable.language.Communication.acspl",
+      "match": "\\b(BAUD|COMMCH|COMMFL|CONID|DISPCH|ECHO|GATEWAY|SUBNET|TCPIP|TCPIP2|TCPPORT|UDPPORT)\\b"
+    },
+    "variable.Miscellaneous": {
+      "name": "variable.language.Miscellaneous.acspl",
+      "match": "\\b(FK|XARRISIZE)\\b"
+    },
+    "variable.Parameter": {
+      "name": "variable.parameter.Parameter.acspl",
+      "match": "((?<=\\.#)\\b([A-Z]+?)\\b)|((?<=\\/)\\b([a-zA-Z]+?)\\b)"
+    },
+    "strings": {
+      "name": "string.quoted.double.acspl",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.acspl",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment.line.character.acspl",
+      "begin": "!|^#",
+      "end": "\\n"
+    }
+  },
+  "scopeName": "source.prg"
+}
