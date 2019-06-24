@@ -27,9 +27,18 @@ patterns:
     - include: "#variable.SysConfig" 
     - include: "#variable.Communication"
     - include: "#variable.Miscellaneous"  
-    - include: "#variable.Parameter"  
+    - include: "#variable.DispCmdOption"  
+    - include: "#variable.SendCmdOption"  
+    - include: "#variable.SprtCmdOption" 
+    - include: "#variable.PathCmdOption"
+    - include: "#variable.PtpCmdOption"
+    - include: "#variable.PvsplineCmdOption" 
+    - include: "#variable.SlaveCmdOption"
+    - include: "#variable.EcoutCmdOption"
+    - include: "#variable.OtherCmdOption"  
     - include: "#strings" 
     - include: "#comments" 
+
 repository: 
     # Axis & PEG/Mark Management Commands
     keywords.Axis:
@@ -224,10 +233,43 @@ repository:
     variable.Miscellaneous:
         name: variable.language.Miscellaneous.acspl
         match: "\\b(FK|XARRISIZE)\\b"
-    # Parameter Variables
-    variable.Parameter:
-        name: variable.parameter.Parameter.acspl
-        match: "((?<=\\.#)\\b([A-Z]+?)\\b)|((?<=\\/)\\b([a-zA-Z]+?)\\b)"
+
+    # Disp Command Option Parameter Variables
+    variable.DispCmdOption:
+        name: variable.parameter.DispCmdOption.acspl
+        match: "(?i)(?<=disp/)\\b([a-zA-Z]+?)\\b"
+    # Send Command Option Parameter Variables
+    variable.SendCmdOption:
+        name: variable.parameter.SendCmdOption.acspl
+        match: "(?i)(?<=send/)\\b([a-zA-Z]+?)\\b"
+    # Path Command Option Parameter Variables
+    variable.PathCmdOption:
+        name: variable.parameter.PathCmdOption.acspl
+        match: "(?i)(?<=path/)\\b([a-zA-Z]+?)\\b"
+    # Ptp Command Option Parameter Variables
+    variable.PtpCmdOption:
+        name: variable.parameter.PtpCmdOption.acspl
+        match: "(?i)(?<=ptp/)\\b([a-zA-Z]+?)\\b"
+    # Sprt Command Option Parameter Variables
+    variable.SprtCmdOption:
+        name: variable.parameter.SprtCmdOption.acspl
+        match: "(?i)(?<=sprt/)\\b([a-zA-Z]+?)\\b"
+    # Pvspline Command Option Parameter Variables
+    variable.PvsplineCmdOption:
+        name: variable.parameter.PvsplineCmdOption.acspl
+        match: "(?i)(?<=pvspline/)\\b([a-zA-Z]+?)\\b"                
+    # Slave Command Option Parameter Variables
+    variable.SlaveCmdOption:
+        name: variable.parameter.SlaveCmdOption.acspl
+        match: "(?i)(?<=slave/)\\b([a-zA-Z]+?)\\b"
+    # Ecout Command Option Parameter Variables
+    variable.EcoutCmdOption:
+        name: variable.parameter.EcoutCmdOption.acspl
+        match: "(?i)(?<=ecout/)\\b([a-zA-Z]+?)\\b"        
+    # Other Command Option  Parameter Variables
+    variable.OtherCmdOption:
+        name: variable.parameter.OtherCmdOption.acspl
+        match: "(?<=\\.#)\\b([A-Z]+?)\\b"    
     # Strings
     strings: 
         name: string.quoted.double.acspl
