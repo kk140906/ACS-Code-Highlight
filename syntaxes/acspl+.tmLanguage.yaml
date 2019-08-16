@@ -133,7 +133,7 @@ repository:
     # Numerics constant
     constant.Numerics:
         name: constant.numeric.acspl
-        match: "\\b[\\d\\.]+\\b"
+        match: "\\b[\\d\\.e]+\\b"
     # Axis variable
     variable.Axis:
         name: variable.language.Axis.acspl
