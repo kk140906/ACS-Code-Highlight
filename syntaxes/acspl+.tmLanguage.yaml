@@ -6,6 +6,7 @@ patterns:
     - include: "#keywords.Motion" 
     - include: "#keywords.ProgramFlow"
     - include: "#keywords.Miscellaneous"
+    - include: "#keywords.LaserControl" 
     - include: "#keywords.Operator"
     - include: "#function.Math"
     - include: "#function.Miscellaneous"
@@ -14,6 +15,7 @@ patterns:
     - include: "#function.CoE"
     - include: "#function.ServoProcessor"
     - include: "#function.SignalProcess"
+    - include: "#function.LCC"
     - include: "#constant.Numerics" 
     - include: "#variable.Axis" 
     - include: "#variable.Motion" 
@@ -78,6 +80,10 @@ repository:
                 dc|stopdc|read|spdc|write|spinject|stopinject|sprt|sprtstop|\
                 eipgetattr|eipgetind1|eipgetind2|eipgettag|eipsetasm\
                 )\\b"
+    # Laser Control
+    keywords.LaserControl:
+        name: keyword.control.LaserControl.acspl
+        match: "\\b(?i)(lcenable|lcdisable)\\b"
     # Operator
     keywords.Operator:
         name: keyword.operator.acspl
@@ -129,7 +135,15 @@ repository:
                 deadzone|dsign|dstr|edge|intgr|lag|match|rand|roll|sat|\
                 copy|inp|map|mapb|mapn|mapnb|mapns|maps|map2|map2b|map2n|\
                 map2nb|map2ns|map2s\
-                )\\b"    
+                )\\b"  
+    # Laser Conctrl function 
+    function.LCC:
+        name: entity.name.function.LCC.acspl
+        match: "\\b(?i)(\
+                LCMODULATION|LCFixedDist|LCFixedInt|LCRandomDist|LCTickle|LCZone|LCZoneGet|\
+                LCZoneSet|LCStop|LCSignalSet|LCSignalGet|LCOutputSet|LCOutputGet|LCDelaySet|\
+                LCDelayGet|AxListAsMask\
+                )\\b"  
     # Numerics constant
     constant.Numerics:
         name: constant.numeric.acspl
@@ -233,7 +247,6 @@ repository:
     variable.Miscellaneous:
         name: variable.language.Miscellaneous.acspl
         match: "\\b(FK|XARRISIZE)\\b"
-
     # Disp Command Option Parameter Variables
     markup.DispCmdOption:
         name: markup.italic.DispCmdOption.acspl
