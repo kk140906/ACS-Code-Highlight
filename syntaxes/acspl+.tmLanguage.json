@@ -18,6 +18,9 @@
       "include": "#keywords.Miscellaneous"
     },
     {
+      "include": "#keywords.LaserControl"
+    },
+    {
       "include": "#keywords.Operator"
     },
     {
@@ -40,6 +43,9 @@
     },
     {
       "include": "#function.SignalProcess"
+    },
+    {
+      "include": "#function.LCC"
     },
     {
       "include": "#constant.Numerics"
@@ -133,7 +139,11 @@
     },
     "keywords.Miscellaneous": {
       "name": "keyword.control.Miscellaneous.acspl",
-      "match": "\\b(?i)(global|int|real|dc|stopdc|read|spdc|write|spinject|stopinject|sprt|sprtstop|eipgetattr|eipgetind1|eipgetind2|eipgettag|eipsetasm)\\b"
+      "match": "\\b(?i)(global|local|int|real|dc|stopdc|read|spdc|write|spinject|stopinject|sprt|sprtstop|eipgetattr|eipgetind1|eipgetind2|eipgettag|eipsetasm)\\b"
+    },
+    "keywords.LaserControl": {
+      "name": "keyword.control.LaserControl.acspl",
+      "match": "\\b(?i)(lcenable|lcdisable)\\b"
     },
     "keywords.Operator": {
       "name": "keyword.operator.acspl",
@@ -166,6 +176,10 @@
     "function.SignalProcess": {
       "name": "entity.name.function.SignalProcess.acspl",
       "match": "\\b(?i)(deadzone|dsign|dstr|edge|intgr|lag|match|rand|roll|sat|copy|inp|map|mapb|mapn|mapnb|mapns|maps|map2|map2b|map2n|map2nb|map2ns|map2s)\\b"
+    },
+    "function.LCC": {
+      "name": "entity.name.function.LCC.acspl",
+      "match": "\\b(?i)(LCMODULATION|LCFixedDist|LCFixedInt|LCRandomDist|LCTickle|LCZone|LCZoneGet|LCZoneSet|LCStop|LCSignalSet|LCSignalGet|LCOutputSet|LCOutputGet|LCDelaySet|LCDelayGet|AxListAsMask)\\b"
     },
     "constant.Numerics": {
       "name": "constant.numeric.acspl",
