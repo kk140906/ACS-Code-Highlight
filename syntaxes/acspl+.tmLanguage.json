@@ -145,6 +145,10 @@
       "name": "keyword.control.LaserControl.acspl",
       "match": "\\b(?i)(lcenable|lcdisable)\\b"
     },
+    "keywords.LaserControl": {
+      "name": "keyword.control.LaserControl.acspl",
+      "match": "\\b(?i)(lcenable|lcdisable)\\b"
+    },
     "keywords.Operator": {
       "name": "keyword.operator.acspl",
       "match": "(\\+|\\-|\\*|\\/|\\||\\&|\\>|\\<|\\=|\\^|\\.#?)"
