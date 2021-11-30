@@ -1,0 +1,3 @@
+enable
+global 
+struct

@@ -1,37 +1,37 @@
 {
-    "name": "acs-code-highlight",
-    "displayName": "ACS Motion Controller Code Highlight",
-    "description": "ACS Motion Controller Code Highlight",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.35.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "acspl+",
-                "aliases": [
-                    "ACSPL+",
-                    "acspl+"
-                ],
-                "extensions": [
-                    ".prg"
-                ],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "acspl",
+  "displayName": "Acs-Code-Highlight",
+  "description": "ACS Controller Code Highlight",
+  "version": "0.0.5",
+  "engines": {
+    "vscode": "^1.62.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "acspl",
+        "aliases": [
+          "ACSPL+",
+          "acspl"
         ],
-        "grammars": [
-            {
-                "language": "acspl+",
-                "scopeName": "source.prg",
-                "path": "./syntaxes/acspl+.tmLanguage.json"
-            }
-        ]
-    },
-    "devDependencies": {
-        "js-yaml": "^3.13.1"
-    }
+        "extensions": [
+          ".prg"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "acspl",
+        "scopeName": "source.prg",
+        "path": "./syntaxes/acspl.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
 }
