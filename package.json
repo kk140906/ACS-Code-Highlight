@@ -12,6 +12,11 @@
     "acs motion control",
     "spiiplus"
   ],
+  "publisher": "kykx",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/kk140906/ACS-Code-Highlight"
+  },
   "icon": "images/acs.png",
   "categories": [
     "Programming Languages"
