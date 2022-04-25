@@ -6,6 +6,13 @@
   "engines": {
     "vscode": "^1.62.0"
   },
+  "keywords": [
+    "acspl+",
+    "acs",
+    "acs motion control",
+    "spiiplus"
+  ],
+  "icon": "images/acs.png",
   "categories": [
     "Programming Languages"
   ],
